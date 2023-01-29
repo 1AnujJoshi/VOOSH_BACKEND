@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { addUser, loginUser } = require("../controllers/user_controller");
-const orderApi = require("../controllers/order_controller");
 const { addOrder, getOrder } = require("../controllers/order_controller");
 
 console.log("router loaded");
