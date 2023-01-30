@@ -21,7 +21,7 @@
 4. Test the api using POSTMAN
 
    ```sh
-   http://localhost:3000/
+   http://localhost:3008 use port as mentioned in the code.
    ```
 
    get-order and add-order routes are authenticated using jsonwebtoken
