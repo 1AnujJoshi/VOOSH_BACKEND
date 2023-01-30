@@ -24,6 +24,8 @@ const addUser = tryCatchHandler(async (req) => {
 });
 
 const loginUser = tryCatchHandler(async (req, res) => {
+  console.log(req.body);
+
   let user = await User.findOne({ phone_number: req.body.phone_number }).lean();
 
   if (!user) {
