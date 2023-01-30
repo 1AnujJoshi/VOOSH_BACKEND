@@ -4,7 +4,7 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 const bcryptSalt = process.env.BCRYPT_SALT;
-const addUser = tryCatchHandler(async (req) => {
+const addUser = tryCatchHandler(async (req, res) => {
   const userExist = await User.count({
     phone_number: req.body.phone_number,
   }).lean();
@@ -16,10 +16,7 @@ const addUser = tryCatchHandler(async (req) => {
       Number(bcryptSalt)
     );
     const user = await User.create(req.body);
-    return {
-      message: "succcess",
-      user: user,
-    };
+    res.status(200).json({ message: "success" });
   }
 });
 
