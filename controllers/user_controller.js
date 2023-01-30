@@ -1,6 +1,6 @@
 const { tryCatchHandler } = require("../helpers/error-handler");
 const { generateToken } = require("../config/jwt.config");
-const User = require("../models/User");
+const User = require("../models/user");
 const bcrypt = require("bcrypt");
 
 const bcryptSalt = process.env.BCRYPT_SALT;

@@ -1,6 +1,6 @@
 const { tryCatchHandler } = require("../helpers/error-handler");
-const Order = require("../models/Order");
-const User = require("../models/User");
+const Order = require("../models/order");
+const User = require("../models/user");
 
 const addOrder = tryCatchHandler(async (req, res) => {
   req.body.user_id = req.payload.id;
